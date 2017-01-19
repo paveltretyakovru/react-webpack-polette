@@ -1,6 +1,4 @@
 # React Redux Polette With Hot Loader 
-=======
-
 ## Installation
 ```
 $ npm install
@@ -58,3 +56,5 @@ $ npm install
 $ git checkout -b elementary-redux-router-materialui-app origin/elementary-redux-router-materialui-app
 $ npm install
 ```
+
+
