@@ -17,5 +17,9 @@ describe('ExampleComponent', () => {
     expect(ReactDOM.findDOMNode(component).textContent)
       .toMatch(/Hello, it's ExampleComponent/);
   });
+
+  it('should have "option" property', () => {
+    expect(component).toBeDefined();
+  });
     
 });
