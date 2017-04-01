@@ -20,11 +20,17 @@
     "react/jsx-no-undef": 1,
     "react/jsx-uses-react": 1,
     "react/jsx-uses-vars": 1,
-    "comma-dangle": [2, "always-multiline"],
+    "comma-dangle": [2, "always-multiline"]
   },
   "globals": {
       "Promise": true,
       "NODE_ENV": true,
       "SERVER_HOST": true,
+
+      // Jasmine
+      "it": true,
+      "expect": true,
+      "describe": true,
+      "beforeEach": true
   }
 }

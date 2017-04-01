@@ -20,6 +20,7 @@ const ENTRY = (NODE_ENV == 'development')
   ]
 
 module.exports = {
+  target: 'node',
   devtool: NODE_ENV == 'development' ? 'cheap-module-eval-source-map' : null,
   entry: ENTRY,
   output: {
@@ -29,8 +30,10 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'NODE_ENV' : JSON.stringify(NODE_ENV),
-      'SERVER_HOST' : JSON.stringify(SERVER_HOST),
+      'process.env': {
+        'NODE_ENV' : JSON.stringify(NODE_ENV),
+        'SERVER_HOST' : JSON.stringify(SERVER_HOST),
+      },
     }),
     new WebpackNotifierPlugin({title: 'Webpack!', alwaysNotify: true}),
     new webpack.optimize.OccurenceOrderPlugin(),
