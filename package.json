@@ -4,7 +4,7 @@
   "description": "Cripted Secure Chat",
   "main": "index.js",
   "scripts": {
-    "test": "karma start karma.config.js",
+    "test": "karma start",
     "server": "node node_modules/nodemon/bin/nodemon.js --watch server.js --watch app server.js",
     "front": "webpack-dev-server",
     "build": "NODE_ENV=production webpack"
