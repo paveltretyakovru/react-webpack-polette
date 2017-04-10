@@ -21,7 +21,7 @@ const ENTRY = (NODE_ENV == 'development')
 
 module.exports = {
   target: 'node',
-  devtool: NODE_ENV == 'development' ? 'cheap-module-eval-source-map' : null,
+  devtool: NODE_ENV == 'development' ? 'source-map' : null,
   entry: ENTRY,
   output: {
     path: path.join(__dirname, 'public'),
