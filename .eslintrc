@@ -26,5 +26,11 @@
       "Promise": true,
       "NODE_ENV": true,
       "SERVER_HOST": true,
+      
+      // Jasmine
+      "it": true,
+      "expect": true,
+      "describe": true,
+      "beforeEach": true
   }
 }
