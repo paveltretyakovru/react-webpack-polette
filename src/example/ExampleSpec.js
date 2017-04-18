@@ -4,10 +4,9 @@
 // var Example = require('./Example'); //my root-test lives in components/__tests__/, so this is how I require in my components.
 
 import React from 'react';
-import expect from 'expect';
 import Example from './Example';
 import ReactDOM from 'react-dom';
-import ReactTestUtils from 'react-dom/test-utils';
+import ReactTestUtils from 'react-dom';
 
 window.rctu = ReactTestUtils;
 
@@ -26,7 +25,7 @@ describe('Example', () => {
   });
 
   it('should have "option" property', () => {
-    expect(component).toNotEqual(undefined);
+    expect(component).toBeDefined();
   });
     
 });
