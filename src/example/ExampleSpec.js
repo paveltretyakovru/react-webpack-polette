@@ -4,9 +4,10 @@
 // var Example = require('./Example'); //my root-test lives in components/__tests__/, so this is how I require in my components.
 
 import React from 'react';
+// import expect from 'expect';
 import Example from './Example';
 import ReactDOM from 'react-dom';
-import ReactTestUtils from 'react-dom';
+import ReactTestUtils from 'react-dom/test-utils';
 
 window.rctu = ReactTestUtils;
 
@@ -21,7 +22,7 @@ describe('Example', () => {
   
   it('should display the correct example option', () => {
     expect(ReactDOM.findDOMNode(component).textContent)
-      .toMatch(/Hello, it's Example/);
+      .toMatch(/Hello, it's ExampleD/);
   });
 
   it('should have "option" property', () => {
