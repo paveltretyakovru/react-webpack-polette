@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('./node_modules/webpack');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const JasmineWebpackPlugin = require('jasmine-webpack-plugin');
+const HtmlWebpackInlineSourcePlugin =  require('html-webpack-inline-source-plugin');
 
 const ROOT_DIR = path.join(__dirname);
 const PUBLIC_DIR = path.join(__dirname,'./public');
@@ -34,6 +35,7 @@ module.exports = {
     new JasmineWebpackPlugin({filename: 'index.html'}),
     new WebpackNotifierPlugin({title: 'Jasmine', alwaysNotify: true}),
     new webpack.SourceMapDevToolPlugin({filename: '[name].bundle.js.map'}),
+    new HtmlWebpackInlineSourcePlugin(),
   ],
 
   devServer: {
